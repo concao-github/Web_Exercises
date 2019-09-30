@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Giỏ hàng</title>
+	<link rel="stylesheet" href="C:\BTWed\CSS\giohang.css">
+</head>
+<body>
+<div class="kl">
+	
+	
+	<h1>Giỏ hàng</h1>
+	
+	<div class="kl2">
+		<div class="p"><img src="C:\BTWed\Image\checked.png" alt="">"Nho Mỹ" đã được thêm vào giỏ hàng</div>
+		<div class="button"><button><a href="">Tiếp tục xem sản phẩm</a></button></div>
+	</div>
+
+	<div class="kl3">
+		<div class="table">
+		<div class="heading">
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col">Sản phẩm</div>
+		<div class="col">Giá</div>
+		<div class="col">Số lượng</div>	
+		<div class="col">Tổng</div>		
+	</div>
+	<div class="table-row">
+		<div class="col"><img class="icon" src="C:\BTWed\Image\x.png"></div>
+		<div class="col"><img width="50%" height="100%"  src="http://at01.chonweb.vn/wp-content/uploads/2019/07/nho.png" alt="nho"></div>
+		<div class="col">Nho Mỹ</div>
+		<div class="col"><span class=" amount">450,000&nbsp;<span class="Symbol">₫</span></span></div>
+		<div class="col"><input  type="number" name="quantity" min="1" max="100"></div>
+		<div class="col"><span class="total"> 120.000</span><span> ₫</span> </div>
+	</div>
+</div>
+	<div class="table-row1">
+	<input type="text" name="id" id="id"  placeholder="Mã ưu đãi"><b>Ưu đãi</b><button type="text" value="submit">Áp dụng: </button>
+	
+	<button class="update"type="submit" value="update" onclick="Total()">Cập nhật giỏ hàng: </button>
+	</div>
+	</div>
+	<div class="kl4">
+		<div class="tonggia">
+
+	<h2>Cộng giỏ hàng</h2>
+
+	<table cellspacing="0" class="shop">
+
+	<tbody>
+		<tr class="tinh">
+		<th>Tạm tính</th>
+		<td data-title="Tạm tính"><span class="t">480,000&nbsp;₫</span></td>
+		</tr>
+
+		
+		
+		
+		
+		
+		<tr class="total">
+		<th>Tổng</th>
+		<td data-title="Tổng"><strong><span class="t">480,000&nbsp;<span>₫</span></span></strong> </td>
+		</tr>
+
+		
+	</tbody></table>
+
+	<div class="checkout">
+		
+	<a href="" class="checkout-button ">
+	Tiến hành thanh toán</a>
+	</div>
+
+	
+	</div>
+	</div>
+	
+</div>
+<script>
+	function Total() {
+		var t=table-row.gia.value;
+		var quantity =table-row.quantity.value;
+		var total=t*quantity;
+		row += "<div>" + total + "</div>";
+	}
+</script>
+</body>
+</html>
