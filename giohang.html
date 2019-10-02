@@ -29,27 +29,27 @@
 	</div>
 	<div class="table-row">
 		<div class="col"><img class="icon" src="C:\BTWed\Image\x.png"></div>
-		<div class="col"><center><img width="50%" height="100%"  src="http://at01.chonweb.vn/wp-content/uploads/2019/07/nho.png" alt="nho"></center></div>
+		<div class="col"><center><img width="50%" height="100%"  src="http://at01.chonweb.vn/wp-content/uploads/2019/07/nho.png" alt="nho" id="img"></center></div>
 		<div class="col">Nho Mỹ</div>
-		<div class="col"><span id=" amount" >120.000</span> <span class="Symbol">&nbsp;₫</span></div>
-		<div class="col"><input  type="number" id="quantity" min="1" max="100" value="1"></div>
-		<div class="col"><span class="total" id="total">120.000</span><span>&nbsp; ₫</span> </div>
+		<div class="col"><input type="text" name="gia" id="gia" disabled="true" value="120000" class="form-control"  ></div>
+		<div class="col"><input type="text" name="soluong" id="soluong" style="width:50%;text-align: center;"></div>
+		<div class="col"><span id="total"></span></div>
 	</div>
 	<div class="table-row">
-		<div class="col"><img class="icon" src="C:\BTWed\Image\x.png"></div>
+		<div class="col"><img class="icon" src="C:\BTWed\Image\x.png" id="img1"></div>
 		<div class="col"><center><img width="50%" height="100%" src="http://at01.chonweb.vn/wp-content/uploads/2019/07/17.5-fresh-fruit-3-300x300.png" alt=""></center></div>
-		<div class="col">Táo Mỹ</div>
-		<div class="col"><span id=" amount1" >150.000</span> <span class="Symbol">&nbsp;₫</span></div>
-		<div class="col"><input  type="number" id="quantity1" min="1" max="100" value="1"></div>
-		<div class="col"><span class="total1" id="total1">150.000</span><span>&nbsp; ₫</span> </div>
+		<div class="col">Cam Mỹ</div>
+		<div class="col"><input type="text" name="gia" id="gia1" disabled="true" value="150000" class="form-control"  ></div>
+		<div class="col"><input type="text" name="soluong" id="soluong1" style="width:50%;text-align: center;"></div>
+		<div class="col"><span id="total1"></span> </div>
 	</div>
 	<div class="table-row">
-		<div class="col"><img class="icon" src="C:\BTWed\Image\x.png"></div>
+		<div class="col"><img class="icon" src="C:\BTWed\Image\x.png" id="img2"></div>
 		<div class="col"><center><img width="50%" height="100%" src="http://at01.chonweb.vn/wp-content/uploads/2019/07/banana__bigImage-300x300.png" alt=""></center></div>
 		<div class="col">Cam Mỹ</div>
-		<div class="col"><span id=" amount2" >150.000</span> <span class="Symbol">&nbsp;₫</span></div>
-		<div class="col"><input  type="number" id="quantity2" min="1" max="100" value="1"></div>
-		<div class="col"><span class="total2" id="total2">150.000</span><span>&nbsp; ₫</span> </div>
+		<div class="col"><input type="text" name="gia" id="gia2" disabled="true" value="150000" class="form-control"  ></div>
+		<div class="col"><input type="text" name="soluong" id="soluong2" style="width:50%;text-align: center;"></div>
+		<div class="col"><span id="total2"></span></div>
 	</div>
 </div>
 	<div class="table-row1">
@@ -97,22 +97,31 @@
 </div>
 <script>
 	function Total() {
-		var amount=120000;
-		var tong=amount*parseInt(document.getElementById('quantity').value);
-		var amount1=150000;
-		var tong1=amount1*parseInt(document.getElementById('quantity1').value);
-		var amount2=150000;
-		var tong2=amount2*parseInt(document.getElementById('quantity2').value);
-		// var tong=450.000*document.getElementById('quantity').value+".000";
-		parseFloat(tong);
-		document.getElementById('total').innerHTML=tong;
-		document.getElementById('total1').innerHTML=tong1;
-		document.getElementById('total2').innerHTML=tong2;
-		  
-		 var tamtinh=(tong1+tong+tong2);
-		 parseFloat(tamtinh)
-		 document.getElementById('tamtinh').innerHTML=tamtinh;
-		  document.getElementById('thanhtoan').innerHTML=tamtinh;
+		
+
+	var img = document.getElementById('img').src;
+	var img1 = document.getElementById('img1').src;
+	var img2 = document.getElementById('img2').src;
+	var gia = document.getElementById('gia').value;
+	var sl = document.getElementById('soluong').value;
+	var sum = gia*sl;
+	document.getElementById('total').innerHTML = sum;
+
+	var giaa = document.getElementById('gia1').value;
+	var sll = document.getElementById('soluong1').value;
+	var summ = giaa*sll;
+	document.getElementById('total1').innerHTML = summ;
+
+	var gia2 = document.getElementById('gia2').value;
+	var sll2 = document.getElementById('soluong2').value;
+	var summm = gia2*sll2;
+	document.getElementById('total2').innerHTML = summm;
+	
+	var tongtien = sum+summ+summm;
+	document.getElementById('tamtinh').innerHTML = tongtien;
+	document.getElementById('thanhtoan').innerHTML = tongtien;
+	var m = [tongtien,gia,sl,giaa,sll,gia2,sll2,img1,img2];
+	mang = m;
 
         
       
