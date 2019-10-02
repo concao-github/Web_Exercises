@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Giỏ hàng</title>
+	<link rel="stylesheet" href="C:\BTWed\CSS\giohang.css">
+</head>
+<body>
+<div class="kl">
+	
+	
+	<h1>Giỏ hàng</h1>
+	
+	<div class="kl2">
+		<div class="p"><img src="C:\BTWed\Image\checked.png" alt="">"Nho Mỹ" đã được thêm vào giỏ hàng</div>
+		<div class="button"><button><a href="">Tiếp tục xem sản phẩm</a></button></div>
+	</div>
+
+	<div class="kl3">
+		<div class="table">
+		<div class="heading">
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col">Sản phẩm</div>
+		<div class="col">Giá</div>
+		<div class="col">Số lượng</div>	
+		<div class="col">Tổng</div>		
+	</div>
+	<div class="table-row">
+		<div class="col"><img class="icon" src="C:\BTWed\Image\x.png"></div>
+		<div class="col"><center><img width="50%" height="100%"  src="http://at01.chonweb.vn/wp-content/uploads/2019/07/nho.png" alt="nho"></center></div>
+		<div class="col">Nho Mỹ</div>
+		<div class="col"><span id=" amount" >120.000</span> <span class="Symbol">&nbsp;₫</span></div>
+		<div class="col"><input  type="number" id="quantity" min="1" max="100" value="1"></div>
+		<div class="col"><span class="total" id="total">120.000</span><span>&nbsp; ₫</span> </div>
+	</div>
+	<div class="table-row">
+		<div class="col"><img class="icon" src="C:\BTWed\Image\x.png"></div>
+		<div class="col"><center><img width="50%" height="100%" src="http://at01.chonweb.vn/wp-content/uploads/2019/07/17.5-fresh-fruit-3-300x300.png" alt=""></center></div>
+		<div class="col">Táo Mỹ</div>
+		<div class="col"><span id=" amount1" >150.000</span> <span class="Symbol">&nbsp;₫</span></div>
+		<div class="col"><input  type="number" id="quantity1" min="1" max="100" value="1"></div>
+		<div class="col"><span class="total1" id="total1">150.000</span><span>&nbsp; ₫</span> </div>
+	</div>
+	<div class="table-row">
+		<div class="col"><img class="icon" src="C:\BTWed\Image\x.png"></div>
+		<div class="col"><center><img width="50%" height="100%" src="http://at01.chonweb.vn/wp-content/uploads/2019/07/banana__bigImage-300x300.png" alt=""></center></div>
+		<div class="col">Cam Mỹ</div>
+		<div class="col"><span id=" amount2" >150.000</span> <span class="Symbol">&nbsp;₫</span></div>
+		<div class="col"><input  type="number" id="quantity2" min="1" max="100" value="1"></div>
+		<div class="col"><span class="total2" id="total2">150.000</span><span>&nbsp; ₫</span> </div>
+	</div>
+</div>
+	<div class="table-row1">
+	<input type="text" name="id" id="id"  placeholder="Mã ưu đãi"><b>Ưu đãi</b><button type="text" value="submit">Áp dụng: </button>
+	
+	<button class="update"type="submit" value="update" onclick="Total()">Cập nhật giỏ hàng: </button>
+	</div>
+	</div>
+	<div class="kl4">
+		<div class="tonggia">
+
+	<h2>Cộng giỏ hàng</h2>
+
+	<table cellspacing="0" class="shop">
+
+	<tbody>
+		<tr class="tinh">
+		<th>Tạm tính</th>
+		<td data-title="Tạm tính"><span id="tamtinh">&nbsp;</span><span> ₫</span></td>
+		</tr>
+
+		
+		
+		
+		
+		
+		<tr class="total">
+		<th>Tổng</th>
+		<td data-title="Tổng"><strong><span id="thanhtoan"></span><span>&nbsp;₫</span></strong> </td>
+		</tr>
+
+		
+	</tbody></table>
+
+	<div class="checkout" >
+		
+	<a href="" class="checkout-button ">
+	Tiến hành thanh toán</a>
+	</div>
+
+	
+	</div>
+	</div>
+	
+</div>
+<script>
+	function Total() {
+		var amount=120000;
+		var tong=amount*parseInt(document.getElementById('quantity').value);
+		var amount1=150000;
+		var tong1=amount1*parseInt(document.getElementById('quantity1').value);
+		var amount2=150000;
+		var tong2=amount2*parseInt(document.getElementById('quantity2').value);
+		// var tong=450.000*document.getElementById('quantity').value+".000";
+		parseFloat(tong);
+		document.getElementById('total').innerHTML=tong;
+		document.getElementById('total1').innerHTML=tong1;
+		document.getElementById('total2').innerHTML=tong2;
+		  
+		 var tamtinh=(tong1+tong+tong2);
+		 parseFloat(tamtinh)
+		 document.getElementById('tamtinh').innerHTML=tamtinh;
+		  document.getElementById('thanhtoan').innerHTML=tamtinh;
+
+        
+      
+	}
+</script>
+</body>
+</html>
